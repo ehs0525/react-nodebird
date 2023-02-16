@@ -47,14 +47,16 @@ const About = () => {
   );
 };
 
-export const getStaticProps = wrapper.getStaticProps((store) => async () => {
-  console.log("getStaticProps");
-  store.dispatch({
-    type: LOAD_USER_REQUEST,
-    data: 1,
-  });
-  store.dispatch(END);
-  await store.sagaTask.toPromise();
-});
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) => async () => {
+    console.log("getServerSideProps");
+    store.dispatch({
+      type: LOAD_USER_REQUEST,
+      data: 1,
+    });
+    store.dispatch(END);
+    await store.sagaTask.toPromise();
+  }
+);
 
 export default About;
