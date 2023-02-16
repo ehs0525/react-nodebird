@@ -1,0 +1,66 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "import",
+    "react-hooks",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-console": "off",
+    "no-underscore-dangle":"off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "object-curly-newline": "off",
+    "linebreak-style": "off",
+    "no-param-reassign": "off",
+    "max-len": ["warn", {"code": 120}],
+    // Strings must use singlequote
+    "quotes": [2, "double", {"avoidEscape": false}],
+    // Function component is not a function declaration
+    "react/function-component-definition": [2, {"namedComponents": "arrow-function"}],
+    // Missing trailing comma
+    "comma-dangle": "off",
+    // "comma-dangle": ["error", {
+    //   "arrays": "never",
+    //   "objects": "always",
+    //   "imports": "never",
+    //   "exports": "never",
+    //   "functions": "never"
+    // }]
+
+    // '>' should be placed at the beginning of the line
+    "operator-linebreak": "off",
+    // Unexpected alert
+    "no-alert": "off",
+    // Expected no linebreak before this expression
+    "implicit-arrow-linebreak": "off",
+    // Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`
+    "arrow-body-style": "off",
+    // Expected to return a value at the end of static async method 'getInitialProps'
+    "consistent-return": "off",
+    // Prop spreading is forbidden
+    "react/jsx-props-no-spreading": "off",
+    // Missing parentheses around multilines JSX
+    "react/jsx-wrap-multilines": "off",
+    // Do not use Array index in keys
+    "react/no-array-index-key": "off"
+  }
+}
