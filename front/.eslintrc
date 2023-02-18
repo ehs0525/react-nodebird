@@ -61,6 +61,7 @@
     // Missing parentheses around multilines JSX
     "react/jsx-wrap-multilines": "off",
     // Do not use Array index in keys
-    "react/no-array-index-key": "off"
+    "react/no-array-index-key": "off",
+    "import/prefer-default-export": "off"
   }
 }
