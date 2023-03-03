@@ -43,7 +43,7 @@ if (process.env.NODE_ENV === "production") {
 }
 app.use(
   cors({
-    origin: ["http://localhost:3060", "nodebird.com", "http://3.36.93.245"],
+    origin: ["http://localhost:3060", "nodebird.store"],
     credentials: true,
   })
 );
@@ -56,6 +56,11 @@ app.use(
     saveUninitialized: false,
     resave: false,
     secret: process.env.COOKIE_SECRET,
+    cookie: {
+      httpOnly: true,
+      secure: false,
+      domain: process.env.NODE_ENV === "production" && ".nodebird.store",
+    },
   })
 );
 app.use(passport.initialize());
